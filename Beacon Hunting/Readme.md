@@ -10,3 +10,12 @@ Begin by collecting Sysmon Event ID 3 from endpoints across your environment, an
 Gather this information into a consolidated CSV file, and supply it as input to the Jupyter notebook when prompted. 
 
 Prerequisite: Jupyter Notebook (https://jupyter.org/install)
+
+## find_beacons_by_fourier
+Looks for machines opening periodic HTTP GET connections, by doing a Fourier transform at multiple sampling intervals, and identifying any strong signals consistent with periodic/metronomic activity.  Pseudo-search network security monitoring tools for:
+  
+  `type:http SourceIP:<internal IP range> method:GET status:200 DestIP:<not internal range>`
+
+Save to CSV and ingest into this notebook.  
+
+Prerequisite: Jupyter Notebook (https://jupyter.org/install)
